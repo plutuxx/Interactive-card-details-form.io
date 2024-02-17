@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <style>
+      .attribution {
+        position: fixed;
+        bottom: 0.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="design-side">
+      <div class="front-card">
+        <img class="card-logo" src="images/card-logo.svg" alt="" />
+        <div class="card-information-design">
+          <div class="first-part">
+            <p id="card-number-design" class="card-number-design">
+              0000 0000 0000 0000
+            </p>
+          </div>
+          <div class="second-part">
+            <p id="card-name-design" class="card-name-design">Jane Appleseed</p>
+            <p id="card-date-design" class="card-date-design">
+              <span>00</span>/<span>00</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="back-card">
+        <p id="card-cvc-design" class="cvc-number-design">000</p>
+      </div>
+    </div>
+    <div id="form-side" class="form-side">
+      <div class="form-container">
+        
+        <label for="card-name">CARDHOLDER NAME</label>
+        <input
+          id="card-name"
+          class="card-name"
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+        />
+        <p class="error-text"></p>
+        <label for="card-number">CARD NUMBER</label>
+        <input
+          id="card-number"
+          class="card-number"
+          type="text"
+          placeholder="e.g. 1234 5678 9123 000"
+          min="16"
+          max="16"
+        />
+        <p class="error-text"></p>
+        <div class="second-part">
+          <div class="date-box">
+            <label for="card-date">EXP. DATE (MM/YY)</label>
+            <div id="card-date" class="card-date">
+              <input type="number" placeholder="MM" />
+              <input type="number" placeholder="YY" />
+            </div>
+            <p class="error-text"></p>
+          </div>
+          <div class="cvc-box">
+            <label for="card-cvc">CVC</label>
+            <input
+              id="card-cvc"
+              class="card-cvc"
+              type="number"
+              placeholder="e.g 123"
+            />
+            <p class="error-text"></p>
+          </div>
+        </div>
+        <button id="confirm-btn" class="btn" >Confirm</button>
+      </div>
+    </div>
+    </div>
+  
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
