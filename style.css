@@ -280,7 +280,20 @@ input[type=number]::-webkit-outer-spin-button {
     color: var(--Dark-grayish-violet);
 }
 
-@media (768px <= width < 992px) {
+.attribution {
+    position: fixed;
+    bottom: 0.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (768px <=width < 992px) {
 
     .back-card {
         right: initial;
@@ -298,7 +311,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 }
 
-@media (320px <= width < 767px) {
+@media (320px <=width < 767px) {
 
     body {
         flex-direction: column;
